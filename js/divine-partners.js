@@ -61,16 +61,18 @@
       nextBtn = ctrls.querySelector('.item-next');
     }
 
-    // 3. Client Brands Data
+    // 3. Client Brands Data — Always Full Color
     const clients = [
       { name: 'Polo Ralph Lauren', image: 'assets/logo-ralph-lauren-clean.png' },
+      { name: 'Aditya Birla Group', image: 'assets/logo-aditya-birla-clean.png' },
       { name: 'MANGO', image: 'assets/logo-mango-clean.png' },
-      { name: 'Antony Morato', image: 'assets/logo-antony-morato-clean.png' },
+      { name: 'PeopleStrong', image: 'assets/logo-peoplestrong-clean.svg' },
       { name: "Domino's Pizza", image: 'assets/logo-dominos-clean.png' },
-      { name: 'Roslyn Cafe', image: 'assets/logo-roslyn-cafe.svg' },
       { name: 'Godrej Interio', image: 'assets/logo-godrej-clean.png' },
       { name: 'Tim Hortons', image: 'assets/logo-tim-hortons-clean.png' },
-      { name: 'Swarovski', image: 'assets/logo-swarovski.svg' }
+      { name: 'Swarovski', image: 'assets/logo-swarovski.svg' },
+      { name: 'Antony Morato', image: 'assets/logo-antony-morato-clean.png' },
+      { name: 'Roslyn Cafe', image: 'assets/logo-roslyn-cafe.svg' }
     ];
 
     // 4. Build Infinite Marquee DOM
