@@ -1,0 +1,122 @@
+/* ==========================================================================
+   DIVINE INTERIORS — PERMANENT FIXED NAVBAR & BOTTOM SECTION GRID ENCLOSURE
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. FIXED NAVBAR & PERMANENT STILL LOGO (NO HIDING, NO MOVEMENT ON SCROLL)
+   -------------------------------------------------------------------------- */
+.header,
+.header.on-hide,
+.header.on-scroll {
+  position: fixed !important;
+  top: 0.8rem !important;
+  left: 0.8rem !important;
+  right: 0.8rem !important;
+  z-index: 10000000 !important;
+  pointer-events: auto !important;
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.header-inner,
+.header.on-hide .header-inner,
+.header.on-scroll .header-inner {
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: none !important;
+}
+
+/* Divine Interiors logo stays completely still and firmly visible */
+.header-logo,
+.header-logo-inner,
+.header-logo-item,
+.header-logo-item.item-txt,
+.header-logo-txt,
+.header-logo-item.item-txt *,
+.header-logo-item.item-txt .embed-ic,
+.header-logo-item.item-txt span {
+  transform: none !important;
+  transition: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: flex !important;
+}
+
+.header-logo-item.item-txt {
+  width: auto !important;
+  max-width: none !important;
+  white-space: nowrap !important;
+}
+
+.header-logo-txt {
+  white-space: nowrap !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  color: #1a1a1a !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+}
+
+/* Hide symbol icon so full wordmark is displayed */
+.header-logo-item:not(.item-txt) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Header menu and navigation options remain intact while scrolling */
+.header-menu-wrap,
+.header-menu-inner,
+.header-menu,
+.header-menu-item-wrap,
+.header-menu-item,
+.header-cta-new {
+  transform: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  display: flex !important;
+}
+
+/* --------------------------------------------------------------------------
+   2. ENCLOSE BOTTOM SECTION LEFT BOXES WITH ARCHITECTURAL BORDERS
+   -------------------------------------------------------------------------- */
+.cta-deco {
+  border-left: 1px solid rgba(40, 40, 40, 0.24) !important;
+}
+
+.cta-deco-item.item-left {
+  grid-column: 1 / 4 !important;
+  grid-row: 1 / 2 !important;
+  position: relative !important;
+  border-left: 1px solid rgba(40, 40, 40, 0.24) !important;
+}
+
+.footer-head,
+.footer-title-wrap,
+.footer-form-wrap {
+  border-left: 1px solid rgba(40, 40, 40, 0.24) !important;
+}
+
+.footer-form-input-wrap {
+  position: relative !important;
+}
+
+.footer-form-input {
+  border-left: 1px solid rgba(40, 40, 40, 0.24) !important;
+}
+
+.footer-copyright-wrap {
+  border-left: 1px solid rgba(40, 40, 40, 0.24) !important;
+  border-bottom: 1px solid rgba(40, 40, 40, 0.24) !important;
+}
+
+.footer-copyright {
+  border-left: 1px solid rgba(40, 40, 40, 0.24) !important;
+  border-bottom: 1px solid rgba(40, 40, 40, 0.24) !important;
+}
