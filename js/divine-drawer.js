@@ -259,8 +259,17 @@
           // Prevent Barba from picking up the navigation
           trigger.setAttribute('data-barba-prevent', '');
 
-          if (window.openDivineContactDrawer) {
-            window.openDivineContactDrawer();
+          sessionStorage.setItem('playShutterOpen', 'true');
+          if (typeof window.playShutterClose === 'function') {
+            window.playShutterClose(() => {
+              window.location.href = 'contact-us.html';
+            });
+          } else if (typeof window.playShutterTransition === 'function') {
+            window.playShutterTransition(() => {
+              window.location.href = 'contact-us.html';
+            });
+          } else {
+            window.location.href = 'contact-us.html';
           }
           return false;
         }
