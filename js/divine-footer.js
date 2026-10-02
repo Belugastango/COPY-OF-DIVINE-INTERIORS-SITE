@@ -1,8 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.footer-logo').forEach((logo) => {
-    logo.style.display = 'none';
-  });
-
   const footerStyle = document.createElement('style');
   footerStyle.textContent = `
     .footer-menu {
@@ -14,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       border-bottom: 1px solid rgba(40, 40, 40, 0.24);
     }
     .footer-menu-item:last-child {
-      border-right: 0;
+      border-right: 1px solid rgba(40, 40, 40, 0.24) !important;
     }
     .footer-info-wrap {
       border-top: 1px solid rgba(40, 40, 40, 0.24);
@@ -25,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       border-bottom: 1px solid rgba(40, 40, 40, 0.24);
     }
     .footer-info-item:last-child {
-      border-right: 0;
+      border-right: 1px solid rgba(40, 40, 40, 0.24) !important;
     }
   `;
   document.head.appendChild(footerStyle);
