@@ -94,7 +94,8 @@
       img.src = client.image;
       img.alt = client.name;
       img.title = client.name;
-      img.loading = 'lazy';
+      img.loading = 'eager';
+      img.decoding = 'async';
 
       cell.appendChild(img);
       track.appendChild(cell);
