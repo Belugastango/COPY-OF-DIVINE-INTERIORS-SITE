@@ -12,12 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
   track.style.width = '100%';
 
   const partners = [
-    { name: 'Domino\'s Pizza', image: 'assets/logo-dominos-client.png' },
-    { name: 'Tim Hortons', image: 'assets/logo-tim-hortons.png' },
-    { name: 'Godrej Interio', image: 'assets/logo-godrej-interio-client.png' },
-    { name: 'MANGO', image: 'assets/logo-mango-client.png' },
     { name: 'Polo Ralph Lauren', image: 'assets/logo-ralph-lauren.png' },
-    { name: 'PeopleStrong', image: 'assets/logo-peoplestrong.webp' },
+    { name: 'MANGO', image: 'assets/logo-mango-client.png' },
+    { name: 'Antony Morato', image: 'assets/logo-antony-morato.png' },
+    { name: 'Domino\'s Pizza', image: 'assets/logo-dominos-client.png' },
+    { name: 'ROSLYN CAFE', image: '' },
+    { name: 'Godrej Interio', image: 'assets/logo-godrej-interio-client.png' },
   ];
 
   track.replaceChildren();
