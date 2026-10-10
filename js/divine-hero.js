@@ -2,11 +2,11 @@ function applyHeroImage() {
   const heroImage = document.querySelector('.home-hero-img-inner > img');
   if (!heroImage) return;
 
-  const targetSrc = 'assets/6a703ca7b25c47076637c631_4f993b1a199968429382e85294f3e6d1_Full.webp';
+  const targetSrc = 'assets/divine-hero-colored-building@2x.png';
   if (heroImage.getAttribute('src') !== targetSrc) {
     heroImage.src = targetSrc;
   }
-  heroImage.alt = 'Black and white architectural sketch of a modern concrete building with large windows and trees on each side.';
+  heroImage.alt = 'Divine Interiors architectural watercolor render of modern concrete building with warm lighting and landscaping.';
 }
 
 // Run immediately and on DOMContentLoaded
