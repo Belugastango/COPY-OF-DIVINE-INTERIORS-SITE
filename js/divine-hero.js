@@ -2,7 +2,7 @@ function applyHeroImage() {
   const heroImage = document.querySelector('.home-hero-img-inner > img');
   if (!heroImage) return;
 
-  const targetSrc = 'assets/divine-hero-colored-building@2x.png';
+  const targetSrc = 'assets/divine-hero-exact-canvas@2x.png';
   if (heroImage.getAttribute('src') !== targetSrc) {
     heroImage.src = targetSrc;
   }

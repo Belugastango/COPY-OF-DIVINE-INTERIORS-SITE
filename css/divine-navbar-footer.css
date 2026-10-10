@@ -647,3 +647,40 @@ section[id],
   }
 }
 
+/* --------------------------------------------------------------------------
+   HERO ARCHITECTURAL CANVAS PRECISION ALIGNMENT
+   Matches user reference image exactly with zero outer box duplication
+   -------------------------------------------------------------------------- */
+.home-hero-img.bg-global {
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.home-hero-img.bg-global .bg-border {
+  display: none !important;
+}
+
+.home-hero-img-inner {
+  mix-blend-mode: normal !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.home-hero-img-inner > img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  max-height: 100% !important;
+  border-radius: 0 !important;
+  display: block !important;
+}
+
+.home-hero-img-deco,
+.home-hero-ruler,
+.home-hero-img-interact-wrap {
+  display: none !important;
+}
+
