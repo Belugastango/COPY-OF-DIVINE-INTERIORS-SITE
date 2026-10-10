@@ -61,6 +61,24 @@
   text-transform: uppercase !important;
 }
 
+.header-logo-brand-img {
+  height: 32px !important;
+  width: auto !important;
+  max-width: 140px !important;
+  display: block !important;
+  object-fit: contain !important;
+  transform: none !important;
+}
+
+.footer-logo-brand-img {
+  height: 44px !important;
+  width: auto !important;
+  max-width: 180px !important;
+  display: block !important;
+  object-fit: contain !important;
+  margin-bottom: 14px !important;
+}
+
 /* Hide symbol icon so full wordmark is displayed */
 .header-logo-item:not(.item-txt) {
   display: none !important;
@@ -97,6 +115,16 @@
   .header-logo-txt {
     font-size: 13.5px !important;
     letter-spacing: 0.04em !important;
+  }
+
+  .header-logo-brand-img {
+    height: 25px !important;
+    max-width: 105px !important;
+  }
+
+  .footer-logo-brand-img {
+    height: 36px !important;
+    max-width: 140px !important;
   }
 
   /* Make hamburger button a proper row with no overlap */

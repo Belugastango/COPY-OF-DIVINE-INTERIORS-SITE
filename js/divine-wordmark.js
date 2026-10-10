@@ -8,23 +8,22 @@ document.addEventListener('DOMContentLoaded', () => {
     logoItem.style.maxWidth = 'none';
     logoItem.style.whiteSpace = 'nowrap';
     logoItem.style.transform = 'none';
-  }
 
-  const wordmark = document.querySelector('.header-logo-item.item-txt .embed-ic');
-  if (wordmark) {
-    wordmark.replaceChildren();
-    const label = document.createElement('span');
-    label.textContent = 'DIVINE INTERIORS';
-    label.style.display = 'inline-block';
-    label.style.fontFamily = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
-    label.style.fontSize = '18px';
-    label.style.fontWeight = '800';
-    label.style.color = '#1a1a1a';
-    label.style.letterSpacing = '0.08em';
-    label.style.lineHeight = '1';
-    label.style.textTransform = 'uppercase';
-    label.style.whiteSpace = 'nowrap';
-    wordmark.appendChild(label);
+    // Ensure the official logo image is present
+    let brandImg = logoItem.querySelector('.header-logo-brand-img');
+    if (!brandImg) {
+      brandImg = document.createElement('img');
+      brandImg.src = 'assets/divine-logo-dark.png';
+      brandImg.alt = 'DIVINE INTERIORS';
+      brandImg.className = 'header-logo-brand-img';
+      brandImg.style.height = '32px';
+      brandImg.style.width = 'auto';
+      brandImg.style.display = 'block';
+      brandImg.style.objectFit = 'contain';
+      const existingTxt = logoItem.querySelector('.header-logo-txt');
+      if (existingTxt) existingTxt.replaceWith(brandImg);
+      else logoItem.appendChild(brandImg);
+    }
   }
 
   // Active scroll guard: Keep Divine Interiors logo completely still and top bar intact
