@@ -291,6 +291,44 @@
     doScroll();
   }
 
+  function scrollToContact() {
+    const c = document.getElementById('contact') || document.querySelector('.cta');
+    const mi = document.querySelector('.main-inner');
+    if (!c) return;
+
+    const offset = getHeaderOffset();
+    let attempts = 0;
+    const doScroll = () => {
+      attempts++;
+      if (window.lenis && typeof window.lenis.scrollTo === 'function') {
+        try {
+          window.lenis.scrollTo(c, { offset: -offset + 8, immediate: true });
+        } catch (_) {}
+      }
+      c.scrollIntoView({ behavior: 'instant', block: 'start' });
+      if (mi) {
+        const miRect = mi.getBoundingClientRect();
+        const cRect = c.getBoundingClientRect();
+        const targetTop = mi.scrollTop + (cRect.top - miRect.top) - offset + 8;
+        if (targetTop > 100) {
+          mi.scrollTop = targetTop;
+        }
+      }
+      const cRect = c.getBoundingClientRect();
+      const winTarget = window.scrollY + cRect.top - offset + 8;
+      if (winTarget > 100) {
+        window.scrollTo(0, winTarget);
+      }
+      if (attempts < 15) {
+        const remaining = c.getBoundingClientRect().top - offset;
+        if (Math.abs(remaining) > 30) {
+          setTimeout(doScroll, 80);
+        }
+      }
+    };
+    doScroll();
+  }
+
   function scrollToHome() {
     const mi = document.querySelector('.main-inner');
     if (window.lenis && typeof window.lenis.scrollTo === 'function') {
@@ -308,7 +346,7 @@
     const shouldOpen = sessionStorage.getItem('playShutterOpen') === 'true';
     const hash = window.location.hash;
 
-    if (hash === '#services' || hash === '#portfolio' || hash === '#about' || hash === '#partnership') {
+    if (hash === '#services' || hash === '#portfolio' || hash === '#about' || hash === '#partnership' || hash === '#contact') {
       const loader = document.querySelector('.loading');
       if (loader) {
         loader.style.display = 'none';
@@ -326,6 +364,8 @@
         updateActiveNav('about');
       } else if (hash === '#partnership') {
         scrollToPartnership();
+      } else if (hash === '#contact') {
+        scrollToContact();
       }
     }
 
@@ -346,6 +386,8 @@
         scrollToAbout();
       } else if (hash === '#partnership') {
         scrollToPartnership();
+      } else if (hash === '#contact') {
+        scrollToContact();
       } else {
         scrollToHome();
       }
@@ -368,6 +410,8 @@
       updateActiveNav('about');
     } else if (hash === '#partnership') {
       scrollToPartnership();
+    } else if (hash === '#contact') {
+      scrollToContact();
     } else if (hash === '#home' || !hash) {
       scrollToHome();
       updateActiveNav('home');
@@ -399,6 +443,11 @@
       setTimeout(scrollToPartnership, 350);
       setTimeout(scrollToPartnership, 800);
       setTimeout(scrollToPartnership, 1500);
+    } else if (hash === '#contact') {
+      setTimeout(scrollToContact, 100);
+      setTimeout(scrollToContact, 350);
+      setTimeout(scrollToContact, 800);
+      setTimeout(scrollToContact, 1500);
     }
   });
 
