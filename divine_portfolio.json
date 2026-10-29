@@ -188,5 +188,31 @@
       "assets/portfolio_new/residence-m3m_07.jpg",
       "assets/portfolio_new/residence-m3m_08.jpg"
     ]
+  },
+  {
+    "id": "taj-apartment-gazipur",
+    "name": "TAJ APARTMENT",
+    "location": "Gazipur",
+    "category": "Residential",
+    "local_images": [
+      "assets/portfolio_new/taj-apartment-gazipur_01.jpg",
+      "assets/portfolio_new/taj-apartment-gazipur_02.jpg",
+      "assets/portfolio_new/taj-apartment-gazipur_03.jpg",
+      "assets/portfolio_new/taj-apartment-gazipur_04.jpg",
+      "assets/portfolio_new/taj-apartment-gazipur_05.jpg",
+      "assets/portfolio_new/taj-apartment-gazipur_06.jpg",
+      "assets/portfolio_new/taj-apartment-gazipur_07.jpg",
+      "assets/portfolio_new/taj-apartment-gazipur_08.jpg",
+      "assets/portfolio_new/taj-apartment-gazipur_09.jpg",
+      "assets/portfolio_new/taj-apartment-gazipur_10.jpg",
+      "assets/portfolio_new/taj-apartment-gazipur_11.jpg",
+      "assets/portfolio_new/taj-apartment-gazipur_12.jpg",
+      "assets/portfolio_new/taj-apartment-gazipur_13.jpg",
+      "assets/portfolio_new/taj-apartment-gazipur_14.jpg",
+      "assets/portfolio_new/taj-apartment-gazipur_15.jpg",
+      "assets/portfolio_new/taj-apartment-gazipur_16.jpg",
+      "assets/portfolio_new/taj-apartment-gazipur_17.jpg",
+      "assets/portfolio_new/taj-apartment-gazipur_18.jpg"
+    ]
   }
 ]
